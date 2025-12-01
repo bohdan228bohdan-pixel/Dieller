@@ -1,0 +1,106 @@
+<!DOCTYPE html>
+<html lang="uk">
+<head>
+<meta charset="UTF-8" />
+<meta name="viewport" content="width=device-width, initial-scale=1.0" />
+<title>Авторизація</title>
+<style>
+    body {
+        margin: 0;
+        font-family: Arial, sans-serif;
+        background: #f5f5f5;
+    }
+    header {
+        background: #333;
+        padding: 15px;
+        color: #fff;
+        text-align: center;
+        font-size: 24px;
+        font-weight: bold;
+    }
+    .container {
+        max-width: 400px;
+        margin: 40px auto;
+        background: #fff;
+        padding: 30px;
+        border-radius: 12px;
+        box-shadow: 0 4px 12px rgba(0,0,0,0.1);
+    }
+    h2 {
+        text-align: center;
+        margin-bottom: 20px;
+    }
+    input {
+        width: 100%;
+        padding: 12px;
+        margin-bottom: 15px;
+        border-radius: 8px;
+        border: 1px solid #ccc;
+    }
+    button {
+        width: 100%;
+        padding: 12px;
+        background: #333;
+        color: #fff;
+        border: none;
+        border-radius: 8px;
+        cursor: pointer;
+        font-size: 16px;
+    }
+    button:hover { background: #555; }
+    .switch {
+        margin-top: 10px;
+        text-align: center;
+        font-size: 14px;
+    }
+    .switch a {
+        color: #333;
+        text-decoration: none;
+        font-weight: bold;
+    }
+    .google-btn {
+        margin-top: 10px;
+        background: #fff;
+        border: 1px solid #ccc;
+        color: #000;
+    }
+</style>
+</head>
+<body>
+<header>Авторизація</header>
+<div class="container" id="registerBox">
+    <h2>Реєстрація</h2>
+    <form action="register.php" method="post">
+        <input type="text" name="login" placeholder="Логін" required />
+        <input type="email" name="emeil" placeholder="Email" required />
+        <input type="password" name="password" placeholder="Пароль" required />
+        <input type="password" name="repeatpass" placeholder="Повторіть пароль" required />
+        <button type="submit">Зареєструватись</button>
+    </form>
+    <button class="google-btn">Увійти через Google</button>
+    <div class="switch">Вже маєте акаунт? <a href="#" onclick="showLogin()">Увійти</a></div>
+</div>
+
+<div class="container" id="loginBox" style="display:none;">
+    <h2>Вхід</h2>
+    <form action="login.php" method="post">
+        <input type="text" name="login" placeholder="Логін" required />
+        <input type="password" name="password" placeholder="Пароль" required />
+        <button type="submit">Увійти</button>
+    </form>
+    <button class="google-btn">Увійти через Google</button>
+    <div class="switch">Не маєте акаунту? <a href="#" onclick="showRegister()">Реєстрація</a></div>
+</div>
+
+<script>
+function showLogin(){
+    document.getElementById('registerBox').style.display = 'none';
+    document.getElementById('loginBox').style.display = 'block';
+}
+function showRegister(){
+    document.getElementById('registerBox').style.display = 'block';
+    document.getElementById('loginBox').style.display = 'none';
+}
+</script>
+</body>
+</html>

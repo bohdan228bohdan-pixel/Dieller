@@ -1,0 +1,305 @@
+<!DOCTYPE html>
+<html lang="uk">
+<head>
+<meta charset="UTF-8">
+<title>Автобус Mercedes</title>
+<meta name="viewport" content="width=device-width, initial-scale=1">
+
+<style>
+    body {
+        margin: 0;
+        font-family: Arial, sans-serif;
+        background: #fff;
+    }
+
+    /* Верхня червона лінія */
+    .top-strip {
+        height: 6px;
+        background: #cc2a2a;
+        width: 100%;
+    }
+
+    /* Банер */
+    .banner {
+        width: 100%;
+        height: 220px;
+        background: url('header-buses.jpg') center/cover no-repeat;
+        position: relative;
+    }
+
+    /* Меню */
+    .menu {
+        position: absolute;
+        bottom: 20px;
+        left: 50%;
+        transform: translateX(-50%);
+        display: flex;
+        gap: 25px;
+    }
+
+    .menu a {
+        background: #ff8c00;
+        padding: 12px 22px;
+        border-radius: 25px;
+        color: #fff;
+        text-decoration: none;
+        font-size: 15px;
+        font-weight: bold;
+        box-shadow: 0 3px 6px rgba(0,0,0,0.3);
+        transition: .3s;
+    }
+
+    .menu a:hover { background: #ffa733; }
+
+    /* Основний контейнер */
+    .main {
+        max-width: 1000px;
+        margin: 40px auto;
+        display: flex;
+        gap: 40px;
+        padding: 0 15px;
+    }
+
+    .left img {
+        width: 100%;
+        border-radius: 6px;
+        box-shadow: 0 0 10px rgba(0,0,0,0.15);
+    }
+
+    .title {
+        font-size: 24px;
+        font-weight: bold;
+        margin-bottom: 15px;
+        color: #333;
+        line-height: 1.3;
+    }
+
+    .price {
+        font-size: 20px;
+        color: #ff7a00;
+        font-weight: 700;
+        margin-bottom: 10px;
+    }
+
+    .price small {
+        display: block;
+        font-size: 12px;
+        color: #777;
+    }
+
+    ul.info {
+        list-style: none;
+        padding: 0;
+        margin: 25px 0;
+    }
+
+    ul.info li {
+        margin-bottom: 12px;
+        font-size: 15px;
+        display: flex;
+        gap: 10px;
+        align-items: center;
+    }
+
+    /* Переваги */
+    .benefits h2 {
+        margin-top: 20px;
+        font-size: 20px;
+        font-weight: bold;
+    }
+
+    .benefits ul {
+        list-style: none;
+        padding-left: 18px;
+    }
+
+    .benefits li {
+        position: relative;
+        margin-bottom: 10px;
+        padding-left: 18px;
+    }
+
+    .benefits li::before {
+        content: "✓";
+        color: #41a451;
+        position: absolute;
+        left: 0;
+    }
+
+    .btn {
+        display: inline-block;
+        background: linear-gradient(180deg, #ffb347, #ffcc33);
+        padding: 12px 25px;
+        color: #fff;
+        font-weight: 600;
+        text-decoration: none;
+        font-size: 16px;
+        border-radius: 5px;
+        margin-top: 25px;
+        box-shadow: 0 4px 7px rgba(255,176,71,0.6);
+        transition: 0.3s;
+    }
+
+    .btn:hover {
+        background: linear-gradient(180deg, #ffcc33, #ffb347);
+    }
+
+</style>
+</head>
+
+<body>
+
+<div class="top-strip"></div>
+
+<div class="banner">
+    <div class="menu">
+        <a href="busindex.html">Головний екран</a>
+        <a href="kvitokindex.html">Замовити квиток</a>
+        <a href="registerindex.html">Реєстрація / Вхід</a>
+    </div>
+</div>
+
+<div class="main">
+
+    <div class="left">
+        <img src="eos.jpg" alt="">
+    </div>
+
+    <div class="right">
+        <div class="title">
+            Замовити <strong>квиток на АВТОБУС</strong> можна за номером телефону
+        </div>
+
+        <div class="price">
+            від 500 грн
+            <small>*з різних міст ціни інші (уточнюйте у диспетчера)</small>
+        </div>
+
+        <ul class="info">
+            <li>Кількість місць: 52</li>
+            <li>Виїзд з Луцька о 11:00</li>
+            <li>Виїзд з Пулав о 8:00</li>
+        </ul>
+
+        <div class="benefits">
+            <h2>Замовивши транспорт у нас, ви отримуєте:</h2>
+            <ul>
+                <li>готівковий або безготівковий розрахунок</li>
+                <li>ліцензію на пасажирські перевезення</li>
+                <li>комфортні автобуси в ідеальному стані</li>
+            </ul>
+        </div>
+
+        <a href="#" class="btn">Прорахувати вартість (безкоштовно)</a>
+
+    </div>
+
+</div>
+
+</body>
+<!-- ===== Як з нами працювати ===== -->
+<section class="work-steps">
+
+    <h2 class="section-title">Як з нами працювати</h2>
+
+    <div class="steps-container">
+
+        <div class="step-item">
+            <div class="step-icon">
+                <img src="Screenshot 2025-11-28 203640.png" alt="">
+            </div>
+            <h3>Вибираєте автобус</h3>
+            <p>Придивіться автобусу за смаком</p>
+        </div>
+
+        <div class="step-item">
+            <div class="step-icon">
+                <img src="Screenshot 2025-11-28 203853.png" alt="">
+            </div>
+            <h3>Телефонуйте менеджеру</h3>
+            <p>Наш фахівець уточнює з вами деталі події</p>
+        </div>
+
+        <div class="step-item">
+            <div class="step-icon">
+                <img src="Screenshot 2025-11-28 203858.png" alt="">
+            </div>
+            <h3>Бронюєте квиток</h3>
+            <p>Після узгодження деталей оплачуєте</p>
+        </div>
+
+        <div class="step-item">
+            <div class="step-icon">
+                <img src="Screenshot 2025-11-28 203901.png" alt="">
+            </div>
+            <h3>Подаємо транспорт</h3>
+            <p>Отримуєте послугу відповідно до ваших побажань</p>
+        </div>
+
+    </div>
+</section>
+
+
+<!-- ===== Чому вибирають нас ===== -->
+<section class="why-us">
+
+    <h2 class="section-title white">Чому вибирають нас?</h2>
+
+    <div class="why-container">
+
+        <div class="why-item">
+            <div class="why-icon">
+                <img src="Screenshot 2025-11-28 203906.png" alt="">
+            </div>
+            <h3>ПARTНЕРСТВО</h3>
+            <p>Ми можемо працювати на постійній основі й організація пасажирських перевезень здійснюється з усією дозволеною документацією.</p>
+        </div>
+
+        <div class="why-item">
+            <div class="why-icon">
+                <img src="Screenshot 2025-11-28 203911.png" alt="">
+            </div>
+            <h3>ДОСТУПНІ ЦІНИ</h3>
+            <p>Недорого взяти квиток на наші автобуси можна для регулярних перевезень до Польщі та Луцька.</p>
+        </div>
+
+        <div class="why-item">
+            <div class="why-icon">
+                <img src="Screenshot 2025-11-28 203914.png" alt="">
+            </div>
+            <h3>КОМФОРТ</h3>
+            <p>Автобуси обладнані всім необхідним: туалет, грубка, кондиціонер та комфортні сидіння.</p>
+        </div>
+
+        <div class="why-item">
+            <div class="why-icon">
+                <img src="Screenshot 2025-11-28 203920.png" alt="">
+            </div>
+            <h3>10 РОКІВ ДОСВІДУ</h3>
+            <p>Ми працюємо більше 10 років — досвід гарантує якість і надійність.</p>
+        </div>
+
+        <div class="why-item">
+            <div class="why-icon">
+                <img src="Screenshot 2025-11-28 203923.png" alt="">
+            </div>
+            <h3>КРАЩІ ВОДІЇ</h3>
+            <p>Наші водії мають великий досвід міжнародних поїздок та відкриті візи.</p>
+        </div>
+
+        <div class="why-item">
+            <div class="why-icon">
+                <img src="Screenshot 2025-11-28 203926.png" alt="">
+            </div>
+            <h3>ВЕЛИКИЙ АВТОПАРК</h3>
+            <p>У нас завжди готові автобуси у відмінному технічному стані.</p>
+        </div>
+
+    </div>
+
+</section>
+<head>
+    <link rel="stylesheet" href="merc2.css">
+</head>
+
+</html>
